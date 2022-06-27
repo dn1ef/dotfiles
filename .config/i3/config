@@ -231,6 +231,8 @@ bindsym $mod+r mode "resize"
 
 exec_always feh --bg-scale ~/Pictures/wallpapers/current_blue.png
 exec_always sh ~/.config/polybar/launch.sh 
+exec_always --no-startup-id mpd &
+
 # --hack
 exec_always dunst
 exec_always picom
