@@ -10,5 +10,5 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
-polybar main --config=~/.config/polybar/polybar-rounded/config.ini &
-polybar second --config=~/.config/polybar/polybar-rounded/config.ini &
+polybar main --config=~/.config/polybar/polybar-square/config.ini &
+polybar second --config=~/.config/polybar/polybar-square/config.ini &
