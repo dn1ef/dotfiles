@@ -1,4 +1,4 @@
---sub-lang 'en,en-US,en-GB,ja,ru'
+--sub-langs 'en,en-US,en-GB,ja,ru'
 --convert-subs ass
 --no-mtime
 --ignore-errors
