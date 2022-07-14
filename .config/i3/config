@@ -242,6 +242,7 @@ exec_always export GTK_IM_MODULE=fcitx
 exec_always export QT_IM_MODULE=fcitx
 exec_always export XMODIFIERS=@im=fcitx
 exec_always fcitx &
+exec_always udiskie &
 
 
 #startup programs
