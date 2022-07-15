@@ -246,9 +246,10 @@ bar {
             inactive_workspace $darkblue $darkblue $white
         }
 
-        status_command i3status
+        status_command i3blocks
         strip_workspace_numbers yes
         position top
+        tray_padding 3 
 }
 
 exec feh --bg-scale ~/Pictures/wallpapers/current_blue.png
