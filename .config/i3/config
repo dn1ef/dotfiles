@@ -11,8 +11,13 @@
 
 set $mod Mod4
 
-default_border pixel 1
+default_border pixel 4
 default_floating_border pixel 1
+
+#border colors
+client.focused #343746 #343746 #F8F8F2 #343746 #343746
+client.focused_inactive #343746 #343746 #F8F8F2 #21222C #21222C
+client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
 
 gaps inner 20
 gaps outer 5
@@ -228,21 +233,13 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-
-exec_always feh --bg-scale ~/Pictures/wallpapers/current_blue.png
-exec_always sh ~/.config/polybar/launch.sh 
-exec_always --no-startup-id mpd &
-
-# --hack
-exec_always dunst
-exec_always picom
-
-#fcitx
-exec_always export GTK_IM_MODULE=fcitx
-exec_always export QT_IM_MODULE=fcitx
-exec_always export XMODIFIERS=@im=fcitx
-exec_always fcitx &
-exec_always udiskie &
+exec feh --bg-scale ~/Pictures/wallpapers/current_blue.png
+exec sh ~/.config/polybar/launch.sh 
+exec --no-startup-id mpd &
+exec dunst
+exec --no-startup-id fcitx -d
+exec picom
+exec udiskie &
 
 
 #startup programs
