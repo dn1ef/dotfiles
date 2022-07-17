@@ -37,7 +37,7 @@ signal=10
 interval=10
 separator=false
 
-[pulsevol]
+[sb-pulsevol]
 signal=10
 interval=10
 instance=default-source
