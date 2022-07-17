@@ -22,7 +22,7 @@ gaps outer 5
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8 
-font pango:monospace, IPAGothic, 10
+font pango:monospace, Hack Nerd Font, Hack, IPAGothic, FontAwesome 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -129,16 +129,16 @@ bindsym $mod+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:一"
-set $ws2 "2:二"
-set $ws3 "3:三"
-set $ws4 "4:四"
-set $ws5 "5:五"
-set $ws6 "6:六"
-set $ws7 "7:七"
-set $ws8 "8:八"
-set $ws9 "9:九"
-set $ws10 "10:十"
+set $ws1 "1:壱"
+set $ws2 "2:弐"
+set $ws3 "3:参"
+set $ws4 "4:肆"
+set $ws5 "5:伍"
+set $ws6 "6:陸"
+set $ws7 "7:漆"
+set $ws8 "8:捌"
+set $ws9 "9:玖"
+set $ws10 "10:拾"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
