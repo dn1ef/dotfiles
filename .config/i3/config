@@ -259,7 +259,7 @@ exec --no-startup-id mpd &
 exec dunst
 exec --no-startup-id fcitx -d
 exec picom
-exec udiskie &
+exec udiskie --tray
 
 
 #startup programs
