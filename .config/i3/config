@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-default_border pixel 4
+default_border pixel 2
 default_floating_border pixel 1
 
 
@@ -22,7 +22,7 @@ gaps outer 5
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8 
-font pango:monospace, Hack Nerd Font, Hack, IPAGothic, FontAwesome 10
+font pango:Terminus, Hack Nerd Font, Hack, IPAGothic, FontAwesome 9 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -71,7 +71,7 @@ bindsym $mod+Shift+q kill
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+a exec "rofi -show drun -no-default-config -config ~/.config/rofi/sidebar.rasi"
-bindsym $mod+d exec "rofi -show drun -no-default-config -config ~/.config/rofi/compact.rasi"
+bindsym $mod+d exec "rofi -show drun -no-default-config -config ~/.config/rofi/compact_without_icons.rasi"
 bindsym $mod+s exec "rofi -show drun -no-default-config -config ~/.config/rofi/center.rasi"
 bindsym $mod+z exec "rofi -show  -modi ':rofi-bookmarks' -no-default-config -config ~/.config/rofi/compact.rasi"
 bindsym $mod+x exec "theme"
@@ -197,6 +197,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# ocr
+bindsym $mod+o exec --no-startup-id transformers_ocr recognize
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -227,40 +230,41 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-set $black #15121C
+set $black #242424 
+set $grey #373B41
 set $white #FFFFFF
 set $darkblue #21222C
 set $lightgreen #c3e88d
 set $red #f07178
 
 #border colors
-client.focused #343746 $darkblue #F8F8F2 #343746 #343746
-client.focused_inactive #343746 #343746 #F8F8F2 #21222C #21222C
-client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
+client.focused $black $grey #fcd99d $black $black 
+client.focused_inactive $black $black #fcd99d #21222C #21222C
+client.unfocused $black $black #fcd99d #21222C #21222C
 
-bar {
-        colors {
-            background $darkblue 
-            focused_workspace $lightgreen $lightgreen $black 
-            urgent_workspace $red $red $white
-            inactive_workspace $darkblue $darkblue $white
-        }
+#bar {
+#        colors {
+#            background $darkblue 
+#            focused_workspace $lightgreen $lightgreen $black 
+#            urgent_workspace $red $red $white
+#            inactive_workspace $darkblue $darkblue $white
+#        }
+#
+#        status_command i3blocks
+#        strip_workspace_numbers yes
+#        position top
+#        tray_padding 3 
+#}
 
-        status_command i3blocks
-        strip_workspace_numbers yes
-        position top
-        tray_padding 3 
-}
-
-exec feh --bg-scale ~/Pictures/wallpapers/current_blue.png
+exec feh --bg-scale ~/Pictures/wallpapers/plain.png
 # exec_always sh ~/.config/polybar/launch.sh 
 exec --no-startup-id mpd &
-
+exec --no-startup-id transformers_ocr listen
 exec dunst
 exec --no-startup-id fcitx -d
 exec picom
 exec udiskie --tray
-
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #startup programs
 exec discord
