@@ -6,7 +6,7 @@
  */
 
 configuration {
-	font:							"Roboto mono 11";
+	font:							"Terminus (TTF) 11";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
