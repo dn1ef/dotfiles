@@ -7,7 +7,7 @@ My very cool dotfiles...
   <li><b>WM</b> - <a href="https://i3wm.org/">i3</a></li>
   <li><b>Shell</b> - <a href="https://www.zsh.org/">zsh</a></li>
   <li><b>Terminal</b> - <a href="https://sw.kovidgoyal.net/kitty/">kitty</a></li>
-  <li></b>File Manager</b> - <a href="https://github.com/ranger/ranger">ranger</a></li>
+  <li><b>File Manager</b> - <a href="https://github.com/ranger/ranger">ranger</a></li>
   <li><b>Bar</b> - <a href="https://github.com/polybar/polybar">Polybar</a></li>
 </ul>
 <details><summary><b>Other programs</b></summary>
