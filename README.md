@@ -23,4 +23,4 @@ My very cool dotfiles...
 </details>
 
 <h2>Screenshot</h2>
-![image](https://user-images.githubusercontent.com/35077353/184523736-5fb71279-4674-450e-9a69-b0e16957fb9f.png)
+<img src="https://user-images.githubusercontent.com/35077353/184523736-5fb71279-4674-450e-9a69-b0e16957fb9f.png">
