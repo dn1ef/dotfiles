@@ -6,8 +6,8 @@
  */
  
 configuration {
-	font:							"Roboto mono 11";
-    show-icons:                     true;
+	font:							"Terminus (TTF) 11";
+    show-icons:                     false;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
     drun-display-format:            "{name}";
@@ -23,10 +23,11 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							4px;
+	border:							3px;
 	border-color:					@ac;
-    border-radius:                  0;
-	width:							50%;
+    border-radius:                  3;
+	width:							25%;
+	height:							40%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -60,14 +61,14 @@ inputbar {
     border-radius:                  0px;
 	border-color:					@ac;
     margin:                         0% 0% 0% 0%;
-    padding:                        1.5%;
+    padding:                        1%;
 }
 
 listview {
     background-color:               @al;
     padding:                        10px;
     columns:                        1;
-    lines:                          8;
+    lines:                          4;
     spacing:                        0%;
     cycle:                          false;
     dynamic:                        true;
