@@ -10,7 +10,7 @@ gaps inner 20
 gaps outer 5
 
 
-font pango:Terminus, Hack Nerd Font, Hack, IPAGothic, FontAwesome 9 
+font pango:Terminus, LanaPixel, Hack Nerd Font, Hack, IPAGothic, FontAwesome 9 
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -80,6 +80,9 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+# lock screen
+bindsym $mod+shift+x exec betterlockscreen -l dim
 
 # focus the parent container
 #bindsym $mod+a focus parent
@@ -154,6 +157,7 @@ bindsym --release Ctrl+Shift+i exec ames -s "ames" "Exported to Anki"
 
 #assigned workspaces
 for_window [class="firefox"] move to workspace $ws1;
+for_window [class="Chromium"] move to workspace $ws1;
 for_window [class="discord"] move to workspace $ws3
 for_window [class="Spotify"] move to workspace $ws4
 for_window [class="Anki"] move to workspace $ws5
@@ -209,11 +213,12 @@ set $white #FFFFFF
 set $darkblue #21222C
 set $lightgreen #c3e88d
 set $red #f07178
+set $yellow #fcd99d
 
 #border colors
-client.focused $black $grey #fcd99d $black $black 
-client.focused_inactive $black $black #fcd99d #21222C #21222C
-client.unfocused $black $black #fcd99d #21222C #21222C
+client.focused $yellow $grey $yellow $yellow $yellow 
+client.focused_inactive $yellow $black $yellow $yellow $yellow 
+client.unfocused $yellow $black $yellow $yellow $yellow 
 
 #bar {
 #        colors {
@@ -233,9 +238,10 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec feh --bg-scale ~/Pictures/wallpapers/plain.png
 exec --no-startup-id mpd &
 exec --no-startup-id transformers_ocr listen
+exec_always --no-startup-id picom -CGb --experimental-backends --backend glx
 exec dunst
 exec --no-startup-id fcitx -d
-exec picom
+exec --no-startup-id picom -CGb
 exec udiskie --tray
 
 #startup programs
