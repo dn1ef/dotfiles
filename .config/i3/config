@@ -6,8 +6,6 @@ default_border pixel 2
 default_floating_border pixel 1
 
 
-gaps inner 20
-gaps outer 5
 
 
 font pango:Terminus, LanaPixel, Hack Nerd Font, Hack, IPAGothic, FontAwesome 9 
